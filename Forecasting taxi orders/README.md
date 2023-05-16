@@ -5,7 +5,7 @@
 Time series processing, statsmodels library;
 Analysis of the global trend, seasonality, daily and hourly patterns;
 feature engineering: splitting the date into components, introducing lags and moving averages;
-sklearn and gradient boosting models - CatBoost, LightGBM;
+sklearn,Linear regression, random forest, decision tree, XGBoost, CatBoost, LightGBM, lasso regression and ridge regression models.
 Selection of model hyperparameters using hyperopt.
 
 ### Input data
