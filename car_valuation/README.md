@@ -1,36 +1,37 @@
-## Определение цены автомобиля по имеющимся характеристикам
+## Determination of the price of the car according to the available characteristics
 
-### Стек инструментов
+### Tool stack
 
-Предобработка данных: обработка пропусков и дубликатов, изменение типа данных, группировка таблиц;  
-Применение моделей градиентного бустинга: sklearn, LigtGBM, XGBoost, CatBoost;  
-Валидация моделей.
+Data preprocessing: processing of omissions and duplicates, changing the data type, grouping tables;
+Application of gradient boosting models: sklearn, LigtGBM, XGBoost, CatBoost, Decision Tree, Random Forest, Linear Regression;
+Model validation.
+### Input data
 
-### Вводные данные
+A used car sales service is developing a mobile application. The algorithm determines the cost of the car put up for sale.
+The model should give the most accurate price, learn quickly and have a minimum prediction time.
 
-Сервис по продаже поддержанных автомобилей разрабатывает мобильное приложение. Алгоритм определяет стоимость выставляемой на продажу машины.  
-Модель должна выдавать максимально точную цену, быстро обучаться и иметь минимальное время предсказания.  
+### Target
 
-### Цель 
+Create a model that predicts the price of a car based on certain features.
 
-Создание модели, которая предсказывает цену автомобиля на основании определенных принаков.
+Labeled data available: vehicle characteristics and sales price
 
-Имеются размеченные данные: характеристики автомобилей и цена продажи.
+### Project structure
 
-### Структура проекта 
+1. Loading and processing data: filling gaps, grouping by detection, searching for duplicates, visualizing results;
+2. Training of gradient boosting models, learning rate analysis;
+3. Checking models and choosing the best version for launch in production.
 
-1. Загрузка и обработка данных: заполнение пропусков, группировка по признакам, поиск дубликатов, визуализация результатов;
-2. Обучение моделей градиентного бустинга, анализ скорости обучения;
-3. Валидация моделей и выбор лучшей для запуска в прод.  
+### Conclusion  
+Scaled and standardized data.
+Linear regression, random forest, decision tree, XGBoost, CatBoost, LightGBM models were trained.
+Found the best hyperparameters for the respective models using GridSearchCV.
 
-### Общий вывод  
+A comparison of the quality of the studied models using the RMSE metric, as well as training and prediction times is shown.
 
-В исследовании приняли участие 4 модели : 'LightGBM', 'Catboost', 'Gradient_Boosting', 'xgboost'
-Основной метрикой тестрирования стала метрика RMSE.
 
-На первом этапе исследования был произведен анализ данных и заполнены пропущенные значения.
-
-На втором этапе кейса было протестировано, в общей сложности, 5 моделей (4 описанных выше и дамми болванка, для сравнения адекватности работы моделей.)
-
-Наилучшей и рекомендованной к использованию моделью признана LightGBM - со значением RMSE на тестовой выборке = 1767.1,  временем обучения = 2,5 минуты, временем предсказания 2,5 сек на учебном сервере.
+Based on the analysis, the conclusion is made:
+- the best CatBoost model, then LightGBM, after Random Forest.
+CatBoost is the fastest training and prediction model for gradient boosting compared to LightGBM and XGBoost.
+is the worst Linear Regression model, it has the highest RMSE metric.
 
