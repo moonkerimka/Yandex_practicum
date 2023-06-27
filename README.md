@@ -19,3 +19,7 @@
 Репозиторий содержит значимые и крупные учебные проекты. 
 
 [1]:https://praktikum.yandex.ru/profile/data-scientist/ 
+
+[Aigerim Tokhmetova_20232DS00583.pdf](https://github.com/moonkerimka/Yandex_practicum/files/11882631/Aigerim.Tokhmetova_20232DS00583.pdf)
+
+
